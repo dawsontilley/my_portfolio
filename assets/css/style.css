@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+:root{
+    --primary-color:rgb(76, 179, 226);
+    --primary-font:#585c5c;
+    --border-color1:rgb(167, 161, 57);
+    --background-mono:#317da0b7;
+}
+p{
+    font-size:20px;
+}
+header{
+background-color:var(--primary-color);
+margin: auto;
+padding:auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+header h1{
+font-weight: bold;
+
+display: inline;
+color: #e4dbda;
+font-size: 60px;
+flex: 1;
+}
+header nav{
+    
+    float: right;
+}
+header nav ul{
+display:flex;
+flex-wrap: wrap;
+
+}
+header nav ul li{
+   
+   font-size: 30px;
+   display: inline;
+   padding: 0 10px 0 10px;
+   margin: auto;
+   align-items: center;
+   color:var(--primary-font);
+   
+}
+.hero{
+    width:100%;
+    height:auto;
+    background-size: cover;
+}
+section{
+    background-color:var(--background-mono) ;
+    background-size: auto;
+}
+.section-title{
+    display: inline-block;
+    font-size: 40px;
+    margin: 15px;
+    bottom: border 1px ;
+    border-right:2px var(--border-color1);
+    
+    
+}
+.section-title h2{
+    color: var(--primary-font);
+    border-bottom: 1px var(--border-color1);
+   /* background-image: url("../img/brick.jpg");
+    background-size: auto; */
+    width:100%;
+    
+}
+
+
+
+
+.about-me-text{
+    display: inline;
+    flex-wrap: wrap;
+   width:50%;
+}
+.about-me img{
+    display: inline-block;
+}
+.about-me-text{
+    display: inline;
+}
+#headshot{
+    width:50%;
+    float:right;
+}
+.project{
+    display: grid;
+    width: 100%;
+}
+.project 
+.project:first{
+    width:100%;
+}
+
+.contact-info{
+    padding: 20px 0 20px 0;
+    display: inline;
+}
