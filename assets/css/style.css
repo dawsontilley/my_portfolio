@@ -8,8 +8,13 @@
 :root{
     --primary-color:rgb(76, 179, 226);
     --primary-font:#585c5c;
+    --section-font:#e4dbda;
     --border-color1:rgb(167, 161, 57);
     --background-mono:#317da0b7;
+}
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color:var(--background-mono);
 }
 p{
     font-size:20px;
@@ -22,13 +27,17 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
+text-shadow: 0 0 10px rgba(0,0,0,.5);
+
+border-bottom: solid 3px ;
+
 }
 
 header h1{
 font-weight: bold;
 
 display: inline;
-color: #e4dbda;
+color: var(--section-font);
 font-size: 60px;
 flex: 1;
 }
@@ -55,57 +64,143 @@ header nav ul li{
     width:100%;
     height:auto;
     background-size: cover;
+    margin:0;
+    background-image: url('../img/tech_backdrop2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 section{
     background-color:var(--background-mono) ;
-    background-size: auto;
+    
+}
+
+.horizontal{
+    display: inline;
 }
 .section-title{
-    display: inline-block;
+    
     font-size: 40px;
-    margin: 15px;
+    margin: 0;
     bottom: border 1px ;
     border-right:2px var(--border-color1);
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
     
     
 }
+.section-title p{
+    display: inline;
+}
+
+
 .section-title h2{
-    color: var(--primary-font);
+    color: var(--section-font);
     border-bottom: 1px var(--border-color1);
    /* background-image: url("../img/brick.jpg");
     background-size: auto; */
-    width:100%;
+    display: inline;
+    
     
 }
 
-
-
-
-.about-me-text{
-    display: inline;
-    flex-wrap: wrap;
-   width:50%;
-}
 .about-me img{
-    display: inline-block;
+    width:25%;
+    
 }
-.about-me-text{
+.aboutbox{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    vertical-align: top;
+    
+    
+
+}
+
+
+.about-me p{
     display: inline;
+    border-radius: 15px;
+    width:40%;
+    border-width: 5px ;
+    border-color: black;
+    background-color: var(--primary-color);
+    border-style: solid;
+    align-items: center;
+    margin: 0 30px 0 40px;;
+    text-align:center;
+
+   /* padding: 30px;*/
+
+    color:#e4dbda;
 }
+
+
+
+
+
+/*
 #headshot{
-    width:50%;
+    width: 30%;
+    
     float:right;
-}
-.project{
+}*/
+.grid-container{
     display: grid;
-    width: 100%;
+    grid-template-columns:[column1] 30px [column2] 40px [columnmiddle]auto [column3]40px [column4]30px ;
+    grid-template-rows: auto;
+
+    
 }
-.project 
+
+.project-container{
+    padding: 20px;
+    border-style: solid;
+    border-color: var(--border-color1);
+    border: 3px;
+    border-radius: 10pxS;
+}
+.runbuddy{
+    
+    background-image: url(../img/runbuddy-pic.PNG);
+    
+    border: solid 5px var(--border-color1);
+    ;
+    background-size: cover;
+    grid-column-start: column2;
+    grid-column-end: column4;
+    
+}
+.grid-item{
+    grid-column-start: columnmiddle;
+}
+/*
 .project:first{
     width:100%;
+    grid-column-start: column2;
+    grid-column-end: column4;
 }
-
+*/
 .contact-info{
     padding: 20px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.left-contact{
     display: inline;
+}
+.right-contact a{
+    display:inline;
+}
+.linkedin{
+    height:50px;
+    
 }
