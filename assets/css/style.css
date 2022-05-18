@@ -311,7 +311,67 @@ display: inline;
     
 }
 
+
+@media screen and (max-width: 980px) {
+header{
+    position: relative;
+    justify-content: center;
+}
+header h1{
+    width: 100%;
+    text-align: center;
+    
+}
+header nav ul {
+    width:100%;
+    justify-content: center;
+}
+header nav ul li{
+    padding-top: 30px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.pro2 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    
+    
+    
+    }
+    .pro3{
+        grid-column-start: 1;
+        grid-column-end: 7;
+        
+         
+    }
+    .section-title h2{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-info{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .aboutbox img{
+        width: 100%;
+    }
+    .aboutbox p{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 @media screen and (max-width: 768px) {
     .contact-me h3{
         display: block;
-    }}
+
+    
+    }
+    .header nav ul li{
+        width: 100%;
+    }
+}
