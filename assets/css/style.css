@@ -14,7 +14,7 @@
 }
 body{
     font-family: Helvetica, Arial, sans-serif;
-    background-color:var(--background-mono);
+    background-color:var(--primary-color);
 }
 p{
     font-size:20px;
@@ -29,7 +29,7 @@ align-items: center;
 flex-wrap: wrap;
 text-shadow: 0 0 10px rgba(0,0,0,.5);
 
-border-bottom: solid 3px ;
+border-bottom: solid 3px var(--border-color1);
 
 }
 
@@ -69,9 +69,9 @@ header nav ul li{
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items:center
 }
 section{
     background-color:var(--background-mono) ;
@@ -89,7 +89,7 @@ section{
     border-right:2px var(--border-color1);
     display: flex;
     flex-wrap: wrap;
-    text-shadow: 0 0 10px rgba(0,0,0,.5);
+
     
     
 }
@@ -100,21 +100,32 @@ section{
 
 .section-title h2{
     color: var(--section-font);
-    border-bottom: 1px var(--border-color1);
+    border-bottom: 3px solid var(--border-color1);
    /* background-image: url("../img/brick.jpg");
     background-size: auto; */
-    display: inline;
+    
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    
+
+    
     
     
 }
 
+.about-me{
+    
+    border-bottom:solid 3px var(--border-color1);
+}
+
 .about-me img{
-    width:25%;
+    width: 40%;
+    flex-shrink: 0;
+    display: inline;
     
 }
 .aboutbox{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     vertical-align: top;
     
@@ -126,14 +137,16 @@ section{
 .about-me p{
     display: inline;
     border-radius: 15px;
-    width:40%;
+    width: 50% ;
     border-width: 5px ;
-    border-color: black;
+    border-color: var(--border-color1);
     background-color: var(--primary-color);
     border-style: solid;
     align-items: center;
-    margin: 0 30px 0 40px;;
+    /*margin: 0 30px 0 30px;*/
     text-align:center;
+    
+    
 
    /* padding: 30px;*/
 
@@ -151,33 +164,69 @@ section{
     float:right;
 }*/
 .grid-container{
+   
     display: grid;
-    grid-template-columns:[column1] 30px [column2] 40px [columnmiddle]auto [column3]40px [column4]30px ;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    row-gap: 30px;
+    
+    /*grid-template-columns:[column1] 30px [column2] 40px [column3] auto [column4]auto [column5]40px [column6]40px ;
+    grid-template-rows: [row1]50px [row2]50px [row3]50px [row4] 50px [row5]50ps;*/
 
     
 }
+.project-container {
+    
+    border-style: solid;
+    border-color: var(--border-color1);
+    height:75px;
+    border-radius: 10px;
+    align-content: center;
+    text-align: center;
+    color:var(--primary-font);
+    
+    border-width: 3px;
+    
+}
 
-.project-container{
+/*
+.project-container p{
+    opacity: 0;
+}
+.project-container:first h3{
+    opacity: 0;
+}*/
+.grid-container:first{
     padding: 20px;
     border-style: solid;
     border-color: var(--border-color1);
     border: 3px;
-    border-radius: 10pxS;
+    border-radius: 10px;
+    /*align-content: center;*/
+    text-align: center;
+  
+    justify-content: center;
 }
 .runbuddy{
     
     background-image: url(../img/runbuddy-pic.PNG);
-    
-    border: solid 5px var(--border-color1);
-    ;
+    grid-column-start: 2;
+    grid-column-end: 6;
     background-size: cover;
-    grid-column-start: column2;
-    grid-column-end: column4;
     
 }
+
 .grid-item{
     grid-column-start: columnmiddle;
+}
+.pro2{
+grid-column-start: 2;
+grid-column-end: 4;
+
+}
+.pro3{
+    grid-column-start: 4;
+    grid-column-end: 6;
+     
 }
 /*
 .project:first{
@@ -188,10 +237,23 @@ section{
 */
 .contact-info{
     padding: 20px 0 20px 0;
-    display: flex;
+    text-align: center;
     flex-wrap: wrap;
+    margin:30px;
+    justify-content: space-around;
 
 
+}
+.contact-info h3{
+    font-size: 30px;
+    color: var(--primary-font)
+}
+.contact-info address{
+    font-size: 20px;
+    color: var(--primary-font)
+}
+.project-container a :hover{
+background-color:  rgba(102, 207, 207, 0.5);
 }
 
 .left-contact{
@@ -200,7 +262,22 @@ section{
 .right-contact a{
     display:inline;
 }
-.linkedin{
-    height:50px;
+.linkedin img{
+    width: 50px;
     
 }
+
+@media screen and (max-width: 980px) {
+    
+    header nav ul li{
+        width:100%;
+    }
+     
+    .hero img{
+        width: 100%;;
+    }
+    .hero p{
+        width:100%;
+    }
+    
+  }
