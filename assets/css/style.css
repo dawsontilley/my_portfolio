@@ -83,17 +83,19 @@ section{
     
     font-size: 40px;
     margin: 0;
+    /*
     bottom: border 1px ;
-    border-right:2px var(--border-color1);
+    border-right:2px var(--border-color1);*/
     display: flex;
     flex-wrap: wrap;
 
     
     
 }
+/*
 .section-title p{
     display: inline;
-}
+}*/
 
 
 .section-title h2{
@@ -111,9 +113,11 @@ section{
 }
 
 .about-me{
-    
+    display: flex;
+    flex-wrap: wrap;
     border-bottom:solid 3px var(--border-color1);
     padding: 20px 0 20px 0;
+    
 }
 
 .about-me img{
@@ -127,10 +131,12 @@ section{
     
 }
 .aboutbox{
-    display: flex;
+    
     justify-content: center;
-    flex-wrap: wrap;
+    display: flex;
     vertical-align: top;
+    flex-wrap: wrap;
+    margin: 30px;
    
     
 
@@ -166,12 +172,19 @@ section{
     
     float:right;
 }*/
+
+.projects{
+    display: grid;
+    flex-direction: wrap;
+    padding: 30px 0 30px 0;
+}
 .grid-container{
    
     display: grid;
     grid-template-columns: repeat(6,1fr);
     row-gap: 30px;
     column-gap: 5px;
+    
    
     
     /*grid-template-columns:[column1] 30px [column2] 40px [column3] auto [column4]auto [column5]40px [column6]40px ;
@@ -264,81 +277,41 @@ background-color:  rgba(102, 207, 207, 0.5);
 .contact-me{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact-me h2{
+display: inline;
 }
 .contact-info{
     
-    text-align: left;
-    
+    text-align: right;
+    display: inline;
     margin:30px;
-    
-
+   
 
 
 }
 .contact-info h3{
     font-size: 30px;
     color: var(--primary-font);
-    display: inline;
+    
     
 }
 .contact-info address{
     font-size: 20px;
     color: var(--primary-font);
-   display: inline;
+  
+
+}
+.contact-info img{
+    margin: 0 0 0 50px;
 }
 .linkedin img {
     width: 50px;
+    
 }
 
-@media screen and (max-width: 980px) {
-    
-    header nav ul li{
-        width:100%;
-    }
-     
-    .hero img{
-        width: 100%;;
-    }
-    .hero p{
-        width:100%;
-    }
-    
-  }
-
-  @media screen and (max-width: 768px) {
-    section{
-      padding: 30px 15px;
-    }
-    .step h3 {
-      flex: 1 100%;
-      text-align: center;
-    }
-  
-    .step-info {
-      flex: 2 100%;
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .step-img {
-      flex: 0 32%;
-      margin-right: 0;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  
-    .step-text {
-      flex: 100%;  
-    }
-  
-    
-    
-  }
-  
-  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-  @media screen and (max-width: 575px) {
-   .hero img{
-       width: 100%;
-   }
-    
-  }
+@media screen and (max-width: 768px) {
+    .contact-me h3{
+        display: block;
+    }}
