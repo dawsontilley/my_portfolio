@@ -198,10 +198,15 @@ section{
     background-image: url(../img/carbon\ fiber.jpg);
     background-size: cover;
 }
+
+.who-brew{
+    background-image: url(../img/project_1.PNG);
+}
 /* left side project*/
 .pro2 {
 grid-column-start: 1;
 grid-column-end: 4;
+
 
 
 /*right side project*/
