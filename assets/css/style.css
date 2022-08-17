@@ -202,6 +202,10 @@ section{
 .who-brew{
     background-image: url(../img/project_1.PNG);
 }
+
+.insp-quotes{
+    background-image: url(../img/quotes.PNG);
+}
 /* left side project*/
 .pro2 {
 grid-column-start: 1;
